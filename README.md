@@ -1,3 +1,16 @@
-# Repro
-The repository is intender to be used to prepare reproduction of some behaviors (like bugs)
-The main branch is intentionally empty, as each issue is created as a separated branch.
+Issue:
+Can't change test profile using environmente variable *QUARKUS_TEST_PROFILE*, as described at https://quarkus.io/guides/continuous-testing#quarkus-test-dev-testing-test-config_quarkus.test.profile
+
+Reproduction:
+
+Actual:
+```
+Green test: *mvn clean test -Dquarkus.test.profile=my_profile*
+Red test: *QUARKUS_TEST_PROFILE=my_profile mvn clean test*
+```
+
+Expected:
+```
+Green test: *mvn clean test -Dquarkus.test.profile=my_profile*
+Green test: *QUARKUS_TEST_PROFILE=my_profile mvn clean test*
+```
