@@ -1,3 +1,11 @@
-# Repro
-The repository is intender to be used to prepare reproduction of some behaviors (like bugs)
-The main branch is intentionally empty, as each issue is created as a separated branch.
+# How to use SubtypingChecker
+
+## Reproduction
+
+mvn clean install
+
+## Expected
+Unlknown result, probaly related to subtyping based on annotations
+
+## Actual
+Exception: java.lang.NullPointerException: Cannot read the array length because "a" is null; java.lang.NullPointerException: Cannot read the array length because "a" is null
