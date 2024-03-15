@@ -1,0 +1,7 @@
+version: 1
+apps:
+  - appID: app1
+    appDirPath: ./
+    appProtocol: grpc
+    appPort: 50051
+    command: ["mvn", "spring-boot:run", "-ntp"]
